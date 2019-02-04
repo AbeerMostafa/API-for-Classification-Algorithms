@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }} - Machine Learning API</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <form action = "http://localhost:5000/user" method = "POST" class="TableForm">
+          <table >
+             {% for key, value in result.items() %}
+                <tr>
+                   <th> {{ key }} </th>
+                   <td> {{ value }} </td>
+                </tr>
+             {% endfor %}
+          </table>
+	   
+        <label class="btn"><input type = "submit" value = "Choose Another Algorithm" /></label>
+      </form>
+   </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>{{ title }} - Machine Learning API</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+   <body>
+      <form action = "http://localhost:5000/result" method = "POST" class="SelectFrom">
+         
+            <select name = "Gender" id="Gender" >
+                <option value="" selected disabled> Choose Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+		  
+            <select name = "SeniorCitizen" id="SeniorCitizen" >
+                <option value="" selected disabled> Choose SeniorCitizen</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+		  
+            <select name = "Dependents" id="Dependents" >
+                <option value="" selected disabled> Choose Dependents</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+		  
+		    <select name = "MultipleLines" id="MultipleLines" >
+                <option value="" selected disabled> Choose MultipleLines</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                <option value="No phone service">No phone service</option>
+            </select> 
+
+         <p class="forTextInput">Tenure : <input type = "text" name = "tenure" /></p>
+         <p class="forTextInput">Total Charges : <input type ="text" name = "TotalCharges" /></p>
+         <label class="btn"><input type = "submit" value = "predict" /></label>
+      </form>
+   </body>
+</html>

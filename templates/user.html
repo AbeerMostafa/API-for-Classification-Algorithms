@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>{{ title }} - Machine Learning API</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <h2 >Welcome, please choose a classification algorithm</h2>
+          <form action = "http://localhost:5000/acc" method = "POST" class="SelectFrom" >
+             
+                <select name = "Algorithm" id="Algorithm" >
+                    <option value="" disabled selected> Choose Algorithm</option>
+                    <option value="KNN">KNN</option>
+                    <option value="Logistic Regression">Logistic Regression</option>
+                    <option value="Naive Bayes">Naive Bayes</option>
+                    <option value="Decision Tree">Decision Tree</option>
+                    <option value="SVM">SVM</option>
+                    <option value="Random Forest">Random Forest</option>
+                </select>
+              
+             <label class="btn"><input type = "submit" value = "Train" /></label>
+          </form>
+          
+    </body>
+</html>
